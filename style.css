@@ -1,61 +1,248 @@
-body{
-font-family:Arial;
-background:#f5f7fa;
-margin:0;
+/* --- Global Resets & Theme Variables --- */
+:root {
+    /* Exact gradient extraction from image_3a960a.jpg */
+    --gradient-start: #007cc2;
+    --gradient-mid: #009b9e;
+    --gradient-end: #00b159;
+    
+    --card-bg: #ffffff;          
+    --text-dark: #0f172a;        
+    --text-muted: #475569;       
+    --text-light: #ffffff;       
+    --font-stack: 'Inter', sans-serif;
 }
 
-header{
-background: linear-gradient(90deg,#0078D4,#00A86B);
-color;
-padding:30px;
-text-align;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header img{
-display;
-margin:0 auto 15px;
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-stack);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+    background-attachment: fixed;
+    color: var(--text-light);
 }
 
-header h1{
-margin:10px 0;
-font-size:42px;
+body {
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-#search{
-width:80%;
-padding:12px;
-margin:20px;
-}
-
-.card{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-/* Navigation Menu */
-.navbar {
-    background: #1e293b;
-    padding: 12px;
-    text-align: center;
-    position: sticky;
+/* --- Fixed Glassmorphic Navigation Header --- */
+.main-header {
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     z-index: 1000;
 }
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+}
+
 .navbar a {
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    margin: 0 15px;
+    margin-left: 1.2rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: all 0.25s ease;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
 }
 
 .navbar a:hover {
-    color: #38bdf8;
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.2);
 }
-html {
-    scroll-behavior: smooth;
+
+/* --- Hero Section --- */
+.hero {
+    padding: 170px 2rem 50px 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* --- Main Layout & Card Sections --- */
+.content-container {
+    max-width: 1050px;
+    margin: 10px auto 80px auto;
+    padding: 0 2rem;
+}
+
+.card-section {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    scroll-margin-top: 95px; /* Perfect landing offset */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--gradient-start);
+}
+
+#ado h2 { color: #0f766e; }      /* Custom Teal variance for sub-sections */
+#terraform h2 { color: #0d9488; }
+#git h2 { color: #0369a1; }
+#linux h2 { color: #15803d; }
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+}
+
+/* --- Accordion Architecture Implementation --- */
+.interview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qa-block {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.qa-block:hover {
+    border-color: #cbd5e1;
+}
+
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    padding: 1.2rem 1.5rem;
+    border: none;
+    font-size: 1.02rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-btn:after {
+    content: '\002B'; /* Elegant Unicode Plus sign */
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-left: 10px;
+}
+
+.accordion-btn.active {
+    background-color: #f1f5f9;
+}
+
+.accordion-btn.active:after {
+    content: "\2212"; /* Elegant Unicode Minus sign */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1); /* Ultra smooth slide logic */
+    background-color: #ffffff;
+}
+
+.accordion-content p {
+    padding: 1.5rem;
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(15, 23, 42, 0.4);
+    font-size: 0.95rem;
+}
+
+/* --- Responsive Adaptations --- */
+@media (max-width: 900px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 1rem;
+    }
+    .navbar a {
+        margin: 0 0.4rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .card-section { padding: 1.5rem; }
 }

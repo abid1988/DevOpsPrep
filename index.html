@@ -1,51 +1,801 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DevOpsPrep</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOpsPrep | Syed Abid Ali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <img src="images/logo.png" alt="DevOpsPrep Logo" width="150">
-    <h1>DevOpsPrep by Syed Abid Ali</h1>
-    <p>Azure | Terraform | Git | Azure DevOps | Linux</p>
-</header>
-<!-- Navigation Menu -->
-<nav class="navbar">
-    <a href="#azure">Azure</a>
-    <a href="#ado">Azure DevOps</a>
-    <a href="#terraform">Terraform</a>
-    <a href="#git">Git & GitHub</a>
-    <a href="#linux">Linux</a>
-</nav>
+    <!-- Fixed Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="images/logo.png" alt="DevOpsPrep Logo" class="logo">
+                <span class="site-title">DevOpsPrep</span>
+            </div>
+            <nav class="navbar">
+                <a href="#azure"><i class="fab fa-microsoft"></i> Azure</a>
+                <a href="#ado"><i class="fas fa-infinity"></i> Azure DevOps</a>
+                <a href="#terraform"><i class="fas fa-cubes"></i> Terraform</a>
+                <a href="#git"><i class="fab fa-git-alt"></i> Git & GitHub</a>
+                <a href="#linux"><i class="fab fa-linux"></i> Linux</a>
+            </nav>
+        </div>
+    </header>
 
-<section id="azure">
-    <h2>Azure</h2>
-    <!-- Azure content -->
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>DevOpsPrep</h1>
+            <p class="subtitle">Mastering Cloud & Infrastructure Automation by Syed Abid Ali</p>
+            <div class="tags">
+                <span>Azure</span>
+                <span>Azure DevOps</span>
+                <span>Terraform</span>
+                <span>Git & GitHub</span>
+                <span>Linux</span>
+            </div>
+        </div>
+    </section>
 
-<section id="ado">
-    <h2>Azure DevOps</h2>
-    <!-- Azure DevOps content -->
-</section>
+    <!-- Main Interview Dashboard -->
+    <main class="content-container">
+        
+        <!-- ================= AZURE SECTION ================= -->
+        <section id="azure" class="card-section">
+            <h2><i class="fab fa-microsoft"></i> Microsoft Azure Interview Prep (1-20)</h2>
+            <p class="section-desc">Core architectural concepts, resource management, IAM, and cloud governance.</p>
+            
+            <div class="interview-container">
+                <!-- Q1 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q1: Explain the Azure Resource Hierarchy and how policy inheritance works.</button>
+                    <div class="accordion-content">
+                        <p>Azure organizes resources into four levels: Management Groups, Subscriptions, Resource Groups, and Resources. Any Azure Policy or Role-Based Access Control (RBAC) applied at a higher level is inherited automatically by all child elements below it.</p>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q2: What is the difference between Azure Availability Zones and Availability Sets?</button>
+                    <div class="accordion-content">
+                        <p>Availability Sets protect applications against local hardware failures within a single datacenter by distributing VMs across Fault and Update domains. Availability Zones protect against an entire datacenter failure by placing VMs across physically separate datacenters within an Azure region.</p>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q3: How do Azure Storage replication strategies (LRS, ZRS, GRS) differ?</button>
+                    <div class="accordion-content">
+                        <p>LRS (Locally Redundant Storage) replicates data 3 times within a single datacenter. ZRS (Zone-Redundant Storage) replicates synchronously across 3 distinct zones in the region. GRS (Geo-Redundant Storage) copies data to a secondary paired region hundreds of miles away for disaster recovery.</p>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q4: What is Azure Virtual Network (VNet) Peering and its constraints?</button>
+                    <div class="accordion-content">
+                        <p>VNet Peering seamlessly connects two Azure virtual networks over the Microsoft backbone network, allowing traffic to route privately without using public internet or VPN gateways. VNets cannot have overlapping IP address spaces to be peered.</p>
+                    </div>
+                </div>
+                <!-- Q5 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q5: Explain the difference between Azure NSG and ASG.</button>
+                    <div class="accordion-content">
+                        <p>A Network Security Group (NSG) contains stateful firewall rules applied to subnets or individual network interfaces. An Application Security Group (ASG) allows you to group VMs under a logical tag name and use that tag as a source/destination filter inside an NSG rule, avoiding explicit IP maintenance.</p>
+                    </div>
+                </div>
+                <!-- Q6 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q6: What is Azure Active Directory (Azure AD / Entra ID) Conditional Access?</button>
+                    <div class="accordion-content">
+                        <p>Conditional Access is a policy engine that evaluates contextual signals (like user identity, location, device health, and application target) to enforce security requirements such as MFA, blocks, or session limitations before granting access.</p>
+                    </div>
+                </div>
+                <!-- Q7 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q7: How do Azure Load Balancer and Application Gateway differ?</button>
+                    <div class="accordion-content">
+                        <p>Azure Load Balancer operates at Layer 4 (Transport layer - TCP/UDP) and routes traffic solely based on IP and port. Azure Application Gateway is a Layer 7 (Application layer) load balancer that supports URL path-based routing, SSL termination, and features an integrated Web Application Firewall (WAF).</p>
+                    </div>
+                </div>
+                <!-- Q8 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q8: What is Azure Front Door?</button>
+                    <div class="accordion-content">
+                        <p>Azure Front Door is a global, scalable entry-point that uses the Microsoft global edge network to deliver high-performance, fast, and secure web applications with global Layer 7 load balancing and CDN capabilities.</p>
+                    </div>
+                </div>
+                <!-- Q9 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q9: Explain Azure Private Link and Private Endpoint.</button>
+                    <div class="accordion-content">
+                        <p>A Private Endpoint is a specific private IP address allocated from your VNet to access an Azure PaaS service (e.g., Azure SQL). Azure Private Link ensures all traffic between your VNet and that PaaS service stays entirely within the private Microsoft backbone network, bypassing the public internet.</p>
+                    </div>
+                </div>
+                <!-- Q10 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q10: What are Azure Managed Identities?</button>
+                    <div class="accordion-content">
+                        <p>Managed Identities provide an automatically managed identity in Microsoft Entra ID for cloud applications to use when connecting to resources. This eliminates the risk of hardcoding service principal credentials or connection strings in your source code.</p>
+                    </div>
+                </div>
+                <!-- Q11 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q11: What is the purpose of Azure Advisor?</button>
+                    <div class="accordion-content">
+                        <p>Azure Advisor is a personalized cloud consultant tool that analyzes your deployed resource configurations and telemetry to provide best practice recommendations across high availability, security, performance, operational excellence, and cost optimization.</p>
+                    </div>
+                </div>
+                <!-- Q12 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q12: How does Azure Policy differ from RBAC?</button>
+                    <div class="accordion-content">
+                        <p>RBAC regulates *who* has access permissions to manage specific Azure resources (focusing on user actions). Azure Policy regulates resource properties during deployment, evaluating *what* configurations are allowed (e.g., preventing the creation of unencrypted disks regardless of user access level).</p>
+                    </div>
+                </div>
+                <!-- Q13 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q13: What is Azure Key Vault and how do applications securely access it?</button>
+                    <div class="accordion-content">
+                        <p>Azure Key Vault is a centralized cloud service for securely storing cryptographic keys, application secrets, certificates, and passwords. Applications authenticate to it securely using Azure Managed Identities, preventing any secret sprawl.</p>
+                    </div>
+                </div>
+                <!-- Q14 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q14: Explain the difference between Azure App Service and Azure Functions.</button>
+                    <div class="accordion-content">
+                        <p>Azure App Service is a fully managed HTTP-based platform-as-a-service (PaaS) meant for hosting monolithic or multi-tier web applications. Azure Functions is a serverless, event-driven compute platform engineered to run short, stateless execution snippets triggered by external hooks.</p>
+                    </div>
+                </div>
+                <!-- Q15 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q15: What is Azure ExpressRoute?</button>
+                    <div class="accordion-content">
+                        <p>ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a dedicated, private connection facilitated by a connectivity provider. This traffic does not go over the public internet, ensuring lower latency and higher reliability.</p>
+                    </div>
+                </div>
+                <!-- Q16 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q16: How do you configure diagnostic logs for Azure resources?</button>
+                    <div class="accordion-content">
+                        <p>Diagnostic logs are enabled via Diagnostic Settings on individual resources. They can be streamed directly to a Log Analytics Workspace for querying, stored securely inside an Azure Storage Account, or streamed to an Event Hub for external SIEM consumption.</p>
+                    </div>
+                </div>
+                <!-- Q17 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q17: What is Azure Log Analytics and KQL?</button>
+                    <div class="accordion-content">
+                        <p>Log Analytics is the primary workspace engine inside Azure Monitor that consolidates log telemetry. Kusto Query Language (KQL) is the expressive, high-performance read-only query system used to filter, aggregate, and visualize data inside those logs.</p>
+                    </div>
+                </div>
+                <!-- Q18 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q18: What is Azure Autoscale?</button>
+                    <div class="accordion-content">
+                        <p>Azure Autoscale is a built-in feature that automatically scales compute resources (like Virtual Machine Scale Sets or App Services) horizontally up or down based on predefined performance metrics (such as CPU utilization or Queue depth) or calendar schedules.</p>
+                    </div>
+                </div>
+                <!-- Q19 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q19: Explain the concept of Azure Blueprint.</button>
+                    <div class="accordion-content">
+                        <p>Azure Blueprint enables cloud architects to define a repeatable set of Azure resources, artifacts, and guardrails—including RBAC assignments, policies, and ARM/Bicep templates—to rapidly provision compliant, standardized subscriptions across an organization.</p>
+                    </div>
+                </div>
+                <!-- Q20 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q20: What is the Azure Well-Architected Framework?</button>
+                    <div class="accordion-content">
+                        <p>It is a set of guiding design principles used to improve the quality of cloud workloads. It is anchored by five distinct pillars: Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="terraform">
-    <h2>Terraform</h2>
-    <!-- Terraform content -->
-</section>
+        <!-- ================= AZURE DEVOPS SECTION ================= -->
+        <section id="ado" class="card-section">
+            <h2><i class="fas fa-infinity"></i> Azure DevOps Interview Prep (21-40)</h2>
+            <p class="section-desc">CI/CD automation, YAML pipelines, agent architecture, and release strategies.</p>
+            
+            <div class="interview-container">
+                <!-- Q21 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q21: What are the main components that make up the Azure DevOps suite?</button>
+                    <div class="accordion-content">
+                        <p>Azure DevOps comprises five primary modules: Azure Boards (agile project management), Azure Repos (Git source control), Azure Pipelines (CI/CD engine), Azure Test Plans (manual and exploratory testing), and Azure Artifacts (package management for NuGet, npm, Maven).</p>
+                    </div>
+                </div>
+                <!-- Q22 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q22: Explain the structural hierarchy inside Azure Pipelines YAML syntax.</button>
+                    <div class="accordion-content">
+                        <p>A YAML pipeline is structured hierarchically into: **Pipeline** (the root workflow), **Stages** (major logical boundaries like Build, Test, Deploy), **Jobs** (execution blocks running on a single agent), and **Steps** (individual tasks, scripts, or actions run sequentially inside a job).</p>
+                    </div>
+                </div>
+                <!-- Q23 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q23: What is the difference between Microsoft-Hosted and Self-Hosted CI/CD Agents?</button>
+                    <div class="accordion-content">
+                        <p>Microsoft-Hosted agents are fresh, isolated virtual machines managed entirely by Microsoft that spin down after each job run. Self-Hosted agents are dedicated virtual or physical machines managed by you, providing full control over cached dependencies, tools, and local network access.</p>
+                    </div>
+                </div>
+                <!-- Q24 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q24: What are Service Connections inside Azure DevOps?</button>
+                    <div class="accordion-content">
+                        <p>Service Connections are secure abstracts used to store credentials and authenticate Azure DevOps agents to external systems like Microsoft Azure Subscriptions, SonarQube, GitHub, or Docker registries without exposing plaintext secrets in code.</p>
+                    </div>
+                </div>
+                <!-- Q25 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q25: Explain the difference between Variable Groups and Secure Files.</button>
+                    <div class="accordion-content">
+                        <p>Variable Groups store key-value configurations and secret keys that can be shared across multiple pipelines. Secure Files are used to store sensitive binary files, such as SSH private keys or Apple distribution certificates, securely within Azure DevOps without tracking them in git.</p>
+                    </div>
+                </div>
+                <!-- Q26 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q26: What is a multi-stage pipeline, and why is it beneficial?</button>
+                    <div class="accordion-content">
+                        <p>A multi-stage pipeline defines both continuous integration (CI) and continuous delivery (CD) inside a single YAML file. It allows engineers to visually track code progression from unit tests and building artifacts all the way through Dev, QA, and Production environments in sequence.</p>
+                    </div>
+                </div>
+                <!-- Q27 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q27: How do you configure conditional execution of stages or tasks in YAML?</button>
+                    <div class="accordion-content">
+                        <p>You use the `condition` property accompanied by built-in expressions. For example, setting `condition: succeeded('BuildStage')` or `condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))` ensures a task only executes if preceding blocks succeed on the main branch.</p>
+                    </div>
+                </div>
+                <!-- Q28 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q28: What is the purpose of "Environments" in Azure Pipelines?</button>
+                    <div class="accordion-content">
+                        <p>Environments represent a logical collection of target deployment resources (e.g., Kubernetes clusters, VMs). Registering them enables deployment tracking, historical traceability back to specific commits, and the enforcement of explicit approval gates or checks.</p>
+                    </div>
+                </div>
+                <!-- Q29 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q29: What are deployment strategies like Canary or Rolling in Azure Pipelines?</button>
+                    <div class="accordion-content">
+                        <p>A **Rolling** strategy replaces instances of the old application version with the new version step-by-step across a target cluster. A **Canary** strategy deploys the new version to a tiny fraction of servers first, allowing you to test stability against live user traffic before initiating a full rollout.</p>
+                    </div>
+                </div>
+                <!-- Q30 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q30: How do you implement explicit Approvals and Checks?</button>
+                    <div class="accordion-content">
+                        <p>Approvals and Checks are configured via the Azure DevOps UI directly on Service Connections, Agent Pools, or Environments. They intercept pipeline execution, forcing a pause until authorized users sign off or external automated API checks clear.</p>
+                    </div>
+                </div>
+                <!-- Q31 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q31: What is the difference between a Task and a Script step in YAML?</button>
+                    <div class="accordion-content">
+                        <p>A `script` (or `bash`/`pwsh`) block executes inline terminal commands directly on the host operating system. A `task` is a packaged, reusable block of abstracted code built by Microsoft or third parties to execute complex actions easily (e.g., `AzureResourceManagerTemplateDeployment`).</p>
+                    </div>
+                </div>
+                <!-- Q32 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q32: Explain Pipeline caching and its impact on build speeds.</button>
+                    <div class="accordion-content">
+                        <p>Pipeline caching allows you to store files that take a long time to download or compute—such as `node_modules` or NuGet packages—across multiple pipeline runs. If a cache key (typically a hash of a package lock file) matches, the agent restores the directory instantly, cutting down build times.</p>
+                    </div>
+                </div>
+                <!-- Q33 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q33: What is a deployment job (`deployment:`) in Azure Pipelines?</button>
+                    <div class="accordion-content">
+                        <p>A deployment job is a specialized type of pipeline job tailored specifically for pushing code to environments. It inherently provides lifecycle hooks (`preDeploy`, `deploy`, `routeTraffic`, `postRouteTraffic`, `on: failure`) and native support for rolling or canary deployment strategies.</p>
+                    </div>
+                </div>
+                <!-- Q34 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q34: How can you pass variables from one job to another downstream job?</button>
+                    <div class="accordion-content">
+                        <p>First, emit the variable inside a script step using the logging command syntax: `echo "##vso[task.setvariable variable=myVar;isoutput=true]myValue"`. Then, inside the downstream job, configure a dependency on the first job and fetch it using: `$[dependencies.JobA.outputs['StepName.myVar']]`.</p>
+                    </div>
+                </div>
+                <!-- Q35 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q35: What are Pull Request triggers in Azure DevOps?</button>
+                    <div class="accordion-content">
+                        <p>PR triggers automatically execute a validation build pipeline whenever a pull request is opened or updated targeting a protected branch. This ensures that incoming code compiles successfully and passes tests before a developer can merge it.</p>
+                    </div>
+                </div>
+                <!-- Q36 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q36: What is a Pipeline Template, and how does it promote DRY principles?</button>
+                    <div class="accordion-content">
+                        <p>Templates allow you to define reusable chunks of stages, jobs, or steps in a standalone YAML file. Other pipelines can then reference this file, injecting specific parameters. This avoids duplication (Don't Repeat Yourself) and enforces compliance standards across multiple teams.</p>
+                    </div>
+                </div>
+                <!-- Q37 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q37: Explain how you integrate SonarQube analysis into Azure Pipelines.</button>
+                    <div class="accordion-content">
+                        <p>You install the SonarQube extension from the Marketplace, configure a Service Connection to your SonarQube server, and add three sequential tasks to your YAML build job: `SonarQubePrepare` (injects configuration), your native code compilation step, and `SonarQubeAnalyze` (analyzes and uploads results).</p>
+                    </div>
+                </div>
+                <!-- Q38 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q38: What are branch policies in Azure Repos?</button>
+                    <div class="accordion-content">
+                        <p>Branch policies protect key branches (like `main`) by enforcing code quality guardrails. They require a minimum number of successful peer reviews, require a green build pipeline, check for unresolved comments, and prevent unauthorized direct commits.</p>
+                    </div>
+                </div>
+                <!-- Q39 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q39: What is the purpose of the Artifact Publish and Download tasks?</button>
+                    <div class="accordion-content">
+                        <p>The `PublishPipelineArtifact` task uploads compiled binaries, packages, or files generated during the build stage up to cloud storage. The `DownloadPipelineArtifact` task retrieves these files in downstream deployment stages, ensuring the exact same binary is deployed across environments.</p>
+                    </div>
+                </div>
+                <!-- Q40 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q40: How do you secure pipeline secrets using Azure Key Vault natively?</button>
+                    <div class="accordion-content">
+                        <p>You use the `AzureKeyVault` task inside your pipeline, or link an Azure Key Vault directly to a Variable Group. This queries Key Vault dynamically at runtime, downloading secrets into localized agent memory as masked environment variables that are scrubbed from all execution logs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="git">
-    <h2>Git & GitHub</h2>
-    <!-- Git content -->
-</section>
+        <!-- ================= TERRAFORM SECTION ================= -->
+        <section id="terraform" class="card-section">
+            <h2><i class="fas fa-cubes"></i> HashiCorp Terraform Interview Prep (41-60)</h2>
+            <p class="section-desc">Infrastructure as Code, state tracking, modules, and lifecycle management.</p>
+            
+            <div class="interview-container">
+                <!-- Q41 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q41: What is Terraform and how does it track real-world infrastructure?</button>
+                    <div class="accordion-content">
+                        <p>Terraform is an open-source declarative Infrastructure as Code (IaC) tool. It tracks real-world infrastructure by mapping resource declarations in code to actual deployed API resources using a JSON metadata registry file known as the **Terraform State File (`terraform.tfstate`)**.</p>
+                    </div>
+                </div>
+                <!-- Q42 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q42: Why should you never store Terraform State locally in production, and how do you solve it?</button>
+                    <div class="accordion-content">
+                        <p>Storing state locally causes single-point-of-failure risks, lacks team collaboration capabilities, and can expose plaintext secrets. This is solved by using a **Remote Backend** (e.g., Azure Blob Storage with DynamoDB/Blob leasing for state locking) to secure and centralize access.</p>
+                    </div>
+                </div>
+                <!-- Q43 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q43: Explain the core execution workflow of Terraform.</button>
+                    <div class="accordion-content">
+                        <p>The workflow consists of four core steps: 1. `terraform init` (downloads provider plug-ins and initializes backends), 2. `terraform validate` (verifies syntax correctness), 3. `terraform plan` (generates an execution preview detailing additions, changes, or deletions), and 4. `terraform apply` (executes the changes against the cloud provider API).</p>
+                    </div>
+                </div>
+                <!-- Q44 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q44: What is the difference between a Resource block and a Data Source block?</button>
+                    <div class="accordion-content">
+                        <p>A `resource` block declares components that Terraform is responsible for creating, modifying, and destroying. A `data` source block provides read-only queries to fetch information from existing infrastructure managed outside of the current Terraform workspace.</p>
+                    </div>
+                </div>
+                <!-- Q45 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q45: How does Terraform handle dependency management? (Implicit vs Explicit)</button>
+                    <div class="accordion-content">
+                        <p>**Implicit dependencies** are automatically discovered when a resource references an attribute of another (e.g., `ami = aws_instance.web.id`). **Explicit dependencies** are manually forced by the engineer using the `depends_on` meta-argument when dependencies aren't visible through direct variable mappings.</p>
+                    </div>
+                </div>
+                <!-- Q46 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q46: What are Terraform Workspaces and when should you use them?</button>
+                    <div class="accordion-content">
+                        <p>Workspaces allow an engineer to maintain separate state files for the exact same configuration directory. They are useful for managing distinct infrastructure environments (like Dev vs QA) using the same code, though separating environments via explicit directory layouts is often preferred for critical production boundaries.</p>
+                    </div>
+                </div>
+                <!-- Q47 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q47: What is a Terraform Module, and what are its key inputs and outputs?</button>
+                    <div class="accordion-content">
+                        <p>A module is a container for grouping multiple resources together into a reusable configuration block. Inputs are handled via standard configuration variables (`variable`), and resources expose internal properties to parent calling configurations using output blocks (`output`).</p>
+                    </div>
+                </div>
+                <!-- Q48 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q48: What does the `terraform refresh` command do?</button>
+                    <div class="accordion-content">
+                        <p>`terraform refresh` queries the provider APIs to update the state file with any real-world changes that occurred outside of Terraform (configuration drift). It does not alter your actual infrastructure; it only reconciles the local state file.</p>
+                    </div>
+                </div>
+                <!-- Q49 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q49: What is a "State Lock" and why is it vital?</button>
+                    <div class="accordion-content">
+                        <p>State locking is a security mechanism supported by remote backends. It locks the state file during active `apply` or `plan` cycles, preventing concurrent pipeline executions from running at the same time and corrupting the state file metadata.</p>
+                    </div>
+                </div>
+                <!-- Q50 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q50: How do you handle configuration drift in Terraform?</button>
+                    <div class="accordion-content">
+                        <p>Running `terraform plan` automatically performs a refresh under the hood. It compares your code, the current state file, and actual live infrastructure. It will then generate an execution preview to add or modify resources back to the configuration declared in your code.</p>
+                    </div>
+                </div>
+                <!-- Q51 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q51: Explain the difference between `count` and `for_each` loops.</button>
+                    <div class="accordion-content">
+                        <p>`count` loops instantiate resources based on an integer index, creating resources as an ordered array. `for_each` loops accept maps or sets of strings, instantiating resources as a distinct map. `for_each` is preferred for dynamic workloads because deleting an element from the middle of a collection won't trigger re-indexing or re-creation of adjacent resources.</p>
+                    </div>
+                </div>
+                <!-- Q52 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q52: What is the purpose of the `terraform.tfvars` file?</button>
+                    <div class="accordion-content">
+                        <p>The `terraform.tfvars` file is used to assign actual values to variables declared in your code, separating code logic from environment-specific values. Terraform automatically loads any file named exactly `terraform.tfvars` or matching `*.auto.tfvars` in the working directory.</p>
+                    </div>
+                </div>
+                <!-- Q53 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q53: How do you safely remove a resource from real life without destroying it via Terraform?</button>
+                    <div class="accordion-content">
+                        <p>You can untrack the resource by running `terraform state rm <resource_address>`. This removes the resource from the state file tracking system completely, allowing it to remain intact in your cloud environment while your code configuration can be safely cleaned up.</p>
+                    </div>
+                </div>
+                <!-- Q54 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q54: What is the `terraform import` command used for?</button>
+                    <div class="accordion-content">
+                        <p>`terraform import` brings pre-existing, manually created cloud resources under Terraform management. It pulls the infrastructure metadata into your state file. You must also write matching resource code blocks to align with the imported resource properties.</p>
+                    </div>
+                </div>
+                <!-- Q55 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q55: Explain the purpose of `lifecycle` blocks (`create_before_destroy`, `prevent_destroy`).</button>
+                    <div class="accordion-content">
+                        <p>The `lifecycle` block configures how Terraform treats resource operations. `create_before_destroy` alters zero-downtime updates by spinning up a replacement instance before dropping the old one. `prevent_destroy` acts as a guardrail, rejecting any execution plan that would result in destroying a critical asset.</p>
+                    </div>
+                </div>
+                <!-- Q56 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q56: What are Local Values (`locals`) and how do they differ from Variables?</button>
+                    <div class="accordion-content">
+                        <p>Input variables are parameters injected by users or external automation files to customize executions. Local values (`locals`) are internal, self-contained expressions within the module that allow you to assign names to repetitive code logic or calculations, acting like local constants.</p>
+                    </div>
+                </div>
+                <!-- Q57 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q57: How do you mask sensitive variables from showing up in console output logs?</button>
+                    <div class="accordion-content">
+                        <p>Set the `sensitive = true` argument inside your variable declaration block. Terraform will mask these inputs as `(sensitive)` within console outputs and plans, though they will still be stored in plaintext inside the underlying `.tfstate` file metadata.</p>
+                    </div>
+                </div>
+                <!-- Q58 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q58: What is Terraform Cloud/Enterprise?</button>
+                    <div class="accordion-content">
+                        <p>Terraform Cloud is a managed application platform that provides centralized remote state management, integrated VCS connections, remote run environments, policy guardrails (Sentinel/OPA), and secure variable management for team collaboration.</p>
+                    </div>
+                </div>
+                <!-- Q59 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q59: What is the `terraform taint` command, and what replaced it?</button>
+                    <div class="accordion-content">
+                        <p>`terraform taint` manually marks a resource as degraded, forcing it to be destroyed and recreated on the next plan and apply cycle. It has been deprecated in favor of the more flexible flag option: `terraform apply -replace="<resource_address>"`.</p>
+                    </div>
+                </div>
+                <!-- Q60 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q60: What are Providers in Terraform?</button>
+                    <div class="accordion-content">
+                        <p>Providers are plugins that translate Terraform declarations into upstream cloud or platform API calls (e.g., AWS, Azure, Google Cloud, Kubernetes). They are downloaded dynamically from the public HashiCorp Registry during initialization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="linux">
-    <h2>Linux</h2>
-    <!-- Linux content -->
-</section>
+        <!-- ================= GIT & GITHUB SECTION ================= -->
+        <section id="git" class="card-section">
+            <h2><i class="fab fa-git-alt"></i> Git & GitHub Interview Prep (61-80)</h2>
+            <p class="section-desc">Version control, branching workflows, merging mechanisms, and collaboration.</p>
+            
+            <div class="interview-container">
+                <!-- Q61 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q61: What is the core architectural difference between Git and SVN?</button>
+                    <div class="accordion-content">
+                        <p>Git is a distributed version control system where every contributor clones a complete local copy of the repository history. SVN is a centralized version control system reliant on a single central server to host and track revision histories.</p>
+                    </div>
+                </div>
+                <!-- Q62 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q62: Explain the three main data zones inside Git architecture.</button>
+                    <div class="accordion-content">
+                        <p>Git manages tracking across three main areas: 1. **Working Directory** (untracked or modified files currently being edited), 2. **Staging Area / Index** (a snapshot layout of files flagged to be captured in the next commit), and 3. **Commit History / Local Repository** (permanently recorded cryptographic snapshots).</p>
+                    </div>
+                </div>
+                <!-- Q63 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q63: What is the difference between `git fetch` and `git pull`?</button>
+                    <div class="accordion-content">
+                        <p>`git fetch` downloads remote metadata and changes into your local repository tracking branches without altering your working code directory. `git pull` performs a `git fetch` followed immediately by a `git merge` to integrate those changes into your active branch.</p>
+                    </div>
+                </div>
+                <!-- Q64 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q64: Explain the structural difference between `git merge` and `git rebase`.</button>
+                    <div class="accordion-content">
+                        <p>`git merge` combines two histories together by creating a new "merge commit," preserving historical timeline context exactly as it happened. `git rebase` re-writes commit histories by moving your feature branch commits to sit on top of the target branch's latest commit, creating a clean, linear history.</p>
+                    </div>
+                </div>
+                <!-- Q65 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q65: What is a Merge Conflict, and how do you resolve it?</button>
+                    <div class="accordion-content">
+                        <p>A merge conflict occurs when distinct changes are made to the exact same line of a file on two different branches, preventing Git from automatically merging them. To resolve it, open the affected file, manually pick between the marked changes, stage the file, and complete the commit.</p>
+                    </div>
+                </div>
+                <!-- Q66 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q66: What is the purpose of `git stash` and when would you use it?</button>
+                    <div class="accordion-content">
+                        <p>`git stash` temporarily shelves uncommitted changes in your working directory, reverting it to match the clean `HEAD` state. This is useful when you need to quickly switch branches to work on an urgent fix without forcing an incomplete commit.</p>
+                    </div>
+                </div>
+                <!-- Q67 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q67: How do `git reset --soft`, `--mixed`, and `--hard` differ?</button>
+                    <div class="accordion-content">
+                        <p>`--soft` moves the branch pointer back but leaves your staging area and working directory intact. `--mixed` (default) rolls back commits and clears the staging area, but preserves your actual code changes. `--hard` resets everything, destroying all uncommitted work and modified states back to the target commit reference.</p>
+                    </div>
+                </div>
+                <!-- Q68 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q68: What is `git cherry-pick`?</button>
+                    <div class="accordion-content">
+                        <p>`git cherry-pick <commit-hash>` selects a specific commit from an entirely separate branch and applies it as a brand-new commit onto your currently active branch, allowing you to pull separate isolated changes without merging the entire history.</p>
+                    </div>
+                </div>
+                <!-- Q69 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q69: What is the purpose of the `.gitignore` file?</button>
+                    <div class="accordion-content">
+                        <p>The `.gitignore` file contains wildcard patterns and explicit paths of files and directories that Git should completely ignore from tracking, keeping compile artifacts, dependencies (e.g., `node_modules`), or localized configuration files out of repository histories.</p>
+                    </div>
+                </div>
+                <!-- Q70 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q70: Explain the Git Flow branching model.</button>
+                    <div class="accordion-content">
+                        <p>Git Flow is a strict branching framework that organizes project delivery across specific tracking roles: `main` tracks production code, `develop` tracks integrated pre-production builds, `feature/` branches handle new capabilities, `release/` branches prepare production updates, and `hotfix/` branches quickly patch production issues.</p>
+                    </div>
+                </div>
+                <!-- Q71 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q71: What is Trunk-Based Development, and how does it compare to Git Flow?</button>
+                    <div class="accordion-content">
+                        <p>Trunk-Based Development is a modern practice where all developers merge small, frequent commits into a single central branch (the "trunk"). It prioritizes CI/CD automated validation and short-lived branches to avoid long merge conflicts, contrasting with the long-lived branches used in Git Flow.</p>
+                    </div>
+                </div>
+                <!-- Q72 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q72: What is a Pull Request (PR)?</button>
+                    <div class="accordion-content">
+                        <p>A Pull Request is a feature hosted on collaboration suites like GitHub. It serves as a formal review request, allowing team members to review your proposed changes, discuss modifications, run automated tests, and provide code quality sign-offs before merging the code.</p>
+                    </div>
+                </div>
+                <!-- Q73 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q73: How does `git revert` differ from `git reset`?</button>
+                    <div class="accordion-content">
+                        <p>`git reset` alters history by moving branch pointers backwards, which can disrupt shared public branches. `git revert` safely record a brand-new commit that implements the exact inverse changes of a targeted past commit, reversing its effects without changing repository history.</p>
+                    </div>
+                </div>
+                <!-- Q74 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q74: What is the difference between GitHub Actions and Azure Pipelines?</button>
+                    <div class="accordion-content">
+                        <p>Both are modern YAML-driven automation platforms. Azure Pipelines is optimized for enterprise management, featuring advanced built-in deployment gates and environment tracking. GitHub Actions is deeply integrated into the GitHub ecosystem, relying on event hooks triggered directly within the repository platform.</p>
+                    </div>
+                </div>
+                <!-- Q75 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q75: What is `git log` and how do you filter it cleanly?</button>
+                    <div class="accordion-content">
+                        <p>`git log` prints the repository commit history. It can be streamlined using flags like `git log --oneline --graph --decorate`, or filtered via authors and dates using options like `git log --author="Name" --since="1 week ago"`.</p>
+                    </div>
+                </div>
+                <!-- Q76 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q76: Explain Git hooks and how they can automate validation.</button>
+                    <div class="accordion-content">
+                        <p>Git hooks are custom execution scripts located in `.git/hooks/` that run automatically when specific lifecycle events occur. For example, a `pre-commit` hook can run lint checks or secret scanning locally before Git allows a developer to complete a commit.</p>
+                    </div>
+                </div>
+                <!-- Q77 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q77: What is a detached HEAD state and how do you fix it?</button>
+                    <div class="accordion-content">
+                        <p>A detached HEAD state occurs when you checkout a specific commit hash or tag directly rather than an active tracking branch name. To fix it, you can run `git checkout <branch_name>` to return to your work, or create a new branch from that commit to save any experimental changes.</p>
+                    </div>
+                </div>
+                <!-- Q78 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q78: What is a Squash Merge?</button>
+                    <div class="accordion-content">
+                        <p>A squash merge condenses all individual commits from a feature branch into a single commit before applying it to the main branch. This combines a series of intermediate commits into one clean entry on the main branch timeline.</p>
+                    </div>
+                </div>
+                <!-- Q79 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q79: What are Git Submodules?</button>
+                    <div class="accordion-content">
+                        <p>Git submodules allow you to keep a separate Git repository pinned as a subdirectory inside a parent repository. This lets you isolate external dependencies or shared libraries within their own standalone version histories.</p>
+                    </div>
+                </div>
+                <!-- Q80 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q80: How can you find a specific past commit that introduced a bug using Git?</button>
+                    <div class="accordion-content">
+                        <p>You use `git bisect`. It performs a binary search through your commit history. You mark a known bad commit and a known good commit, and Git checks out intermediate points for testing until it identifies the exact commit that introduced the bug.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <!-- ================= LINUX SECTION ================= -->
+        <section id="linux" class="card-section">
+            <h2><i class="fab fa-linux"></i> Linux OS & Administration Prep (81-100)</h2>
+            <p class="section-desc">Linux internals, file systems, process states, and networking administration.</p>
+            
+            <div class="interview-container">
+                <!-- Q81 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q81: What are the main components that make up the Linux Operating System architecture?</button>
+                    <div class="accordion-content">
+                        <p>The Linux OS architecture comprises four key layers: the **Hardware** layer, the **Kernel** (the core engine managing hardware resources and abstractions), the **Shell** (the command-line interface interpreter), and **User Applications** running on top.</p>
+                    </div>
+                </div>
+                <!-- Q82 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q82: Explain the standard Linux File System Hierarchy (Root layout).</button>
+                    <div class="accordion-content">
+                        <p>Linux organizes components logically under `/`: `/bin` contains essential binaries, `/etc` stores system configuration scripts, `/var` stores variable data like logs, `/home` holds user directories, and `/proc` is a virtual file system mapping real-time kernel processes.</p>
+                    </div>
+                </div>
+                <!-- Q83 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q83: What is an Inode in Linux file systems?</button>
+                    <div class="accordion-content">
+                        <p>An Index Node (Inode) is a metadata structure on a storage drive that stores key properties about a file, including its size, owner permissions, and disk block pointers. It does not store the file's name or its actual raw data contents.</p>
+                    </div>
+                </div>
+                <!-- Q84 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q84: Explain the difference between Soft Links (Symbolic) and Hard Links.</button>
+                    <div class="accordion-content">
+                        <p>A **Hard Link** creates an alternative name pointer pointing directly to the exact same underlying Inode on the disk. A **Soft Link (Symlink)** is a shortcut file containing a path reference pointing to another file name. If the source file is deleted, a symlink breaks, but a hard link remains valid.</p>
+                    </div>
+                </div>
+                <!-- Q85 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q85: What are the primary process states inside a Linux kernel environment?</button>
+                    <div class="accordion-content">
+                        <p>Processes exist within several lifecycle states: **Running/Runnable (R)** actively executing code, **Interruptible Sleep (S)** waiting on an event, **Uninterruptible Sleep (D)** waiting directly on hardware I/O operations, **Stopped (T)** halted by signals, and **Zombie (Z)** terminated but still retaining an entry in the process table.</p>
+                    </div>
+                </div>
+                <!-- Q86 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q86: What is a Zombie Process, and how do you clean it up?</button>
+                    <div class="accordion-content">
+                        <p>A zombie process has finished executing but its parent process has not yet read its exit status via the `wait()` system call. Zombie processes cannot be killed directly using `kill -9` because they are already dead; you must kill or restart the parent process to clean them up.</p>
+                    </div>
+                </div>
+                <!-- Q87 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q87: How do Linux permissions work? Explain `chmod 755`.</button>
+                    <div class="accordion-content">
+                        <p>Permissions are split across three groups: User, Group, and Others, using numerical values (Read=4, Write=2, Execute=1). `chmod 755` translates to: User gets full access (4+2+1=7), Group gets read and execute (4+1=5), and Others get read and execute (4+1=5).</p>
+                    </div>
+                </div>
+                <!-- Q88 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q88: What is the purpose of the `/etc/fstab` file?</button>
+                    <div class="accordion-content">
+                        <p>The file `/etc/fstab` contains configuration details for disk drives, block devices, and remote shares. It defines how and where these devices should be mounted automatically during system boot sequences.</p>
+                    </div>
+                </div>
+                <!-- Q89 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q89: How do you trace and analyze real-time resource utilization in Linux?</button>
+                    <div class="accordion-content">
+                        <p>Real-time resource utilization can be monitored using interactive commands like `top` or `htop` for processing overhead, `free -m` for memory allocations, `df -h` for storage tracking, and `iostat` for checking input/output disk metrics.</p>
+                    </div>
+                </div>
+                <!-- Q90 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q90: Explain the difference between `systemd` and SysV init engines.</button>
+                    <div class="accordion-content">
+                        <p>SysV init processes startup scripts sequentially one by one, resulting in slower boot cycles. `systemd` is a modern initialization daemon that parallelizes service activation, uses target units, and manages process groups using control groups (cgroups).</p>
+                    </div>
+                </div>
+                <!-- Q91 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q91: How can you check network socket connectivity and port status?</button>
+                    <div class="accordion-content">
+                        <p>Network port allocations and socket status can be inspected using commands like `ss -tulnp` or `netstat -tulnp` to identify listening processes, and tools like `nc` (netcat) or `telnet` to test outbound connections to remote network ports.</p>
+                    </div>
+                </div>
+                <!-- Q92 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q92: What does the Load Average metric represent in Linux commands?</button>
+                    <div class="accordion-content">
+                        <p>Load average displays three values indicating CPU and disk I/O queue resource demands over the past 1, 5, and 15 minutes. A load average value of 1.0 on a single-core system indicates 100% capacity utilization.</p>
+                    </div>
+                </div>
+                <!-- Q93 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q93: What is Swap space and when does the system utilize it?</button>
+                    <div class="accordion-content">
+                        <p>Swap space is a designated region on a storage drive used when physical RAM is fully saturated. The kernel swaps inactive memory pages out to swap space to free up memory for active workloads, preventing out-of-memory crashes.</p>
+                    </div>
+                </div>
+                <!-- Q94 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q94: Explain the difference between `grep`, `awk`, and `sed` utilities.</button>
+                    <div class="accordion-content">
+                        <p>`grep` is used to search and extract lines matching a text pattern. `sed` is a stream editor used to parse and transform text. `awk` is a complete programming language designed for advanced data manipulation and column-based text processing.</p>
+                    </div>
+                </div>
+                <!-- Q95 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q95: How do you configure and secure SSH access on a Linux server?</button>
+                    <div class="accordion-content">
+                        <p>SSH is secured via `/etc/ssh/sshd_config`. Best practices include changing the default port 22, disabling plaintext password logins to require cryptographic SSH key pairs, and disabling root login capabilities (`PermitRootLogin no`).</p>
+                    </div>
+                </div>
+                <!-- Q96 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q96: What are the differences between Hard and Soft resource limits (`ulimit`)?</button>
+                    <div class="accordion-content">
+                        <p>A **Soft Limit** is the default resource restriction value enforced for a user or process, which the user can manually increase up to the hard ceiling. A **Hard Limit** represents the maximum restriction ceiling, manageable only by root users.</p>
+                    </div>
+                </div>
+                <!-- Q97 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q97: What is a Linux Cron Job and how do you configure it?</button>
+                    <div class="accordion-content">
+                        <p>A cron job is an automated background task scheduled to run at specific times. It is configured using the `crontab -e` command, using five field flags to define scheduling: Minute, Hour, Day of Month, Month, and Day of Week.</p>
+                    </div>
+                </div>
+                <!-- Q98 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q98: What are Linux Environment Variables and how do you make them permanent?</button>
+                    <div class="accordion-content">
+                        <p>Environment variables store global system configuration values used by shells and child processes. To make them permanent for a user, declare the export statement (e.g., `export MY_VAR="value"`) inside their user profile configuration script, such as `~/.bashrc` or `~/.zshrc`.</p>
+                    </div>
+                </div>
+                <!-- Q99 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q99: What does the Out-Of-Memory (OOM) Killer do?</button>
+                    <div class="accordion-content">
+                        <p>The OOM Killer is an automated kernel subsystem protective feature. When system memory is completely exhausted, the OOM Killer reviews process scores and terminates low-priority or high-memory consuming processes to protect the core operating system from a total crash.</p>
+                    </div>
+                </div>
+                <!-- Q100 -->
+                <div class="qa-block">
+                    <button class="accordion-btn">Q100: How do you check system log histories across systemd configurations?</button>
+                    <div class="accordion-content">
+                        <p>System logs managed by systemd are reviewed using `journalctl`. You can refine your search using flags like `journalctl -u nginx` to check specific service units, or use time-bounding constraints like `journalctl --since "1 hour ago"`.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 DevOpsPrep. Built by Syed Abid Ali.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
