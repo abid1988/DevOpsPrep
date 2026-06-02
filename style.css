@@ -5,14 +5,20 @@ margin:0;
 }
 
 header{
-background:linear-gradient(
-90deg,
-#0078D4,
-#00A86B
-);
-color:white;
+background: linear-gradient(90deg,#0078D4,#00A86B);
+color;
 padding:30px;
-text-align:center;
+text-align;
+}
+
+header img{
+display;
+margin:0 auto 15px;
+}
+
+header h1{
+margin:10px 0;
+font-size:42px;
 }
 
 #search{
