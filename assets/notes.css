@@ -1,0 +1,177 @@
+/* ============================================
+   DevOpsPrep — Notes / Accordion Styles
+   ============================================ */
+
+/* Container */
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+/* Each card */
+.note-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.note-card:hover {
+  border-color: #2d3448;
+}
+
+/* Header (clickable) */
+.note-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  gap: 1rem;
+  transition: background 0.15s;
+}
+
+.note-header:hover {
+  background: var(--bg3);
+}
+
+.note-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.note-week {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.note-title-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+}
+
+.note-chevron {
+  font-size: 0.65rem;
+  color: var(--muted);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+/* Open state */
+.note-card.open .note-chevron {
+  transform: rotate(180deg);
+}
+
+.note-card.open .note-header {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Body (collapsible) */
+.note-body {
+  display: none;
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.note-card.open .note-body {
+  display: flex;
+}
+
+/* Summary text */
+.note-summary {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.9rem;
+}
+
+/* Bullet points */
+.note-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.note-points li {
+  font-size: 0.875rem;
+  color: var(--text);
+  line-height: 1.6;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.note-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.7rem;
+  top: 0.2rem;
+}
+
+.note-points li code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+/* Code block */
+.note-code {
+  background: #0a0c11;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.note-code pre {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: #a8d8a8;
+  padding: 1rem 1.25rem;
+  margin: 0;
+  white-space: pre;
+}
+
+/* Tags */
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.ntag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+}

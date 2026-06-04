@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azure — DevOpsPrep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">DevOps<br><strong>Prep</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-item" data-label="Home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="azure.html" class="nav-item active" data-label="Azure"><span class="nav-icon">☁️</span><span class="nav-label">Azure</span></a></li>
+      <li><a href="terraform.html" class="nav-item" data-label="Terraform"><span class="nav-icon">🏗️</span><span class="nav-label">Terraform</span></a></li>
+      <li><a href="azuredevops.html" class="nav-item" data-label="Azure DevOps"><span class="nav-icon">🔄</span><span class="nav-label">Azure DevOps</span></a></li>
+      <li><a href="linux.html" class="nav-item" data-label="Linux"><span class="nav-icon">🐧</span><span class="nav-label">Linux</span></a></li>
+    </ul>
+    <button class="sidebar-toggle" id="toggleBtn" title="Toggle Sidebar">&#x25C4;</button>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+
+    <div class="page-hero">
+      <div class="page-hero-top">
+        <a href="../index.html" class="back-link">← Back</a>
+        <span class="page-badge badge-azure">AZ-104</span>
+      </div>
+      <h1 class="page-title">☁️ Microsoft Azure</h1>
+      <p class="page-desc">Complete prep guide for Azure Administrator (AZ-104). Covers resource hierarchy, IAM, networking, storage, compute, and CLI/PowerShell commands.</p>
+    </div>
+
+    <h2 class="section-title">Topics Covered</h2>
+    <div class="topics-grid">
+      <div class="topic-card"><h4>Azure Resource Hierarchy</h4><p>Management Groups → Subscriptions → Resource Groups → Resources. Scope and inheritance.</p></div>
+      <div class="topic-card"><h4>Azure IAM & RBAC</h4><p>Role assignments, built-in roles, custom roles, deny assignments, and PIM.</p></div>
+      <div class="topic-card"><h4>Virtual Networking</h4><p>VNet, Subnets, NSG, ASG, VNet Peering, VPN Gateway, ExpressRoute.</p></div>
+      <div class="topic-card"><h4>Azure Compute</h4><p>VMs, Availability Sets, Scale Sets, App Service, AKS basics.</p></div>
+      <div class="topic-card"><h4>Storage</h4><p>Blob, File, Queue, Table storage. Access tiers, lifecycle policies, SAS tokens.</p></div>
+      <div class="topic-card"><h4>ARM Templates</h4><p>Declarative JSON templates, parameters, variables, outputs, and deployments.</p></div>
+      <div class="topic-card"><h4>Azure CLI & PowerShell</h4><p>Key commands, resource management, scripting for automation.</p></div>
+      <div class="topic-card"><h4>Monitoring & Governance</h4><p>Azure Monitor, Log Analytics, Policy, Blueprints, Cost Management.</p></div>
+    </div>
+
+    <div class="resources-block">
+      <h3>📚 Official Resources</h3>
+      <ul>
+        <li><a href="https://learn.microsoft.com/en-us/certifications/azure-administrator/" target="_blank">AZ-104 Official Certification Page</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview" target="_blank">Azure Resource Manager Overview</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview" target="_blank">Azure Virtual Network Docs</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/overview" target="_blank">Azure RBAC Overview</a></li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <p>DevOpsPrep · <a href="../index.html">Home</a></p>
+    </footer>
+  </main>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

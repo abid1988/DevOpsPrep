@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azure DevOps — DevOpsPrep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">DevOps<br><strong>Prep</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-item" data-label="Home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="azure.html" class="nav-item" data-label="Azure"><span class="nav-icon">☁️</span><span class="nav-label">Azure</span></a></li>
+      <li><a href="terraform.html" class="nav-item" data-label="Terraform"><span class="nav-icon">🏗️</span><span class="nav-label">Terraform</span></a></li>
+      <li><a href="azuredevops.html" class="nav-item active" data-label="Azure DevOps"><span class="nav-icon">🔄</span><span class="nav-label">Azure DevOps</span></a></li>
+      <li><a href="linux.html" class="nav-item" data-label="Linux"><span class="nav-icon">🐧</span><span class="nav-label">Linux</span></a></li>
+    </ul>
+    <button class="sidebar-toggle" id="toggleBtn" title="Toggle Sidebar">&#x25C4;</button>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+
+    <div class="page-hero">
+      <div class="page-hero-top">
+        <a href="../index.html" class="back-link">← Back</a>
+        <span class="page-badge badge-azuredevops">CI/CD</span>
+      </div>
+      <h1 class="page-title">🔄 Azure DevOps</h1>
+      <p class="page-desc">End-to-end DevOps with Azure. Covers Pipelines (YAML & Classic), Repos, Boards, Artifacts, and release management strategies.</p>
+    </div>
+
+    <h2 class="section-title">Topics Covered</h2>
+    <div class="topics-grid">
+      <div class="topic-card"><h4>Azure Pipelines (YAML)</h4><p>Stages, jobs, steps, triggers, variables, templates, and multi-stage pipelines.</p></div>
+      <div class="topic-card"><h4>Build & Release</h4><p>CI builds, CD releases, deployment strategies: blue/green, canary, rolling.</p></div>
+      <div class="topic-card"><h4>Azure Repos</h4><p>Git branching strategies, PR policies, branch protection, merge strategies.</p></div>
+      <div class="topic-card"><h4>Azure Boards</h4><p>Work items, sprints, backlogs, Kanban boards, queries, and dashboards.</p></div>
+      <div class="topic-card"><h4>Azure Artifacts</h4><p>Package feeds (npm, NuGet, PyPI), upstream sources, versioning.</p></div>
+      <div class="topic-card"><h4>Service Connections</h4><p>ARM service connections, GitHub integration, Docker registry connections.</p></div>
+      <div class="topic-card"><h4>Agents & Pools</h4><p>Microsoft-hosted vs self-hosted agents, agent pools, parallel jobs.</p></div>
+      <div class="topic-card"><h4>Environments & Gates</h4><p>Deployment environments, approval gates, quality gates, resource locks.</p></div>
+    </div>
+
+    <div class="resources-block">
+      <h3>📚 Official Resources</h3>
+      <ul>
+        <li><a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops" target="_blank">Azure Pipelines Docs</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/?view=azure-devops" target="_blank">Azure Repos Git Docs</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops" target="_blank">Azure Boards Docs</a></li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <p>DevOpsPrep · <a href="../index.html">Home</a></p>
+    </footer>
+  </main>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

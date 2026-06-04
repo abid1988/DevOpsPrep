@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terraform — DevOpsPrep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">DevOps<br><strong>Prep</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-item" data-label="Home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="azure.html" class="nav-item" data-label="Azure"><span class="nav-icon">☁️</span><span class="nav-label">Azure</span></a></li>
+      <li><a href="terraform.html" class="nav-item active" data-label="Terraform"><span class="nav-icon">🏗️</span><span class="nav-label">Terraform</span></a></li>
+      <li><a href="azuredevops.html" class="nav-item" data-label="Azure DevOps"><span class="nav-icon">🔄</span><span class="nav-label">Azure DevOps</span></a></li>
+      <li><a href="linux.html" class="nav-item" data-label="Linux"><span class="nav-icon">🐧</span><span class="nav-label">Linux</span></a></li>
+    </ul>
+    <button class="sidebar-toggle" id="toggleBtn" title="Toggle Sidebar">&#x25C4;</button>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+
+    <div class="page-hero">
+      <div class="page-hero-top">
+        <a href="../index.html" class="back-link">← Back</a>
+        <span class="page-badge badge-terraform">IaC</span>
+      </div>
+      <h1 class="page-title">🏗️ Terraform</h1>
+      <p class="page-desc">Infrastructure as Code with HashiCorp Terraform. State management, modules, providers, workspaces, and real-world Azure provisioning patterns.</p>
+    </div>
+
+    <h2 class="section-title">Topics Covered</h2>
+    <div class="topics-grid">
+      <div class="topic-card"><h4>Terraform Fundamentals</h4><p>HCL syntax, providers, resources, data sources, variables, and outputs.</p></div>
+      <div class="topic-card"><h4>State Management</h4><p>Local vs remote state, Azure backend (blob), state locking, terraform.tfstate.</p></div>
+      <div class="topic-card"><h4>Modules</h4><p>Creating reusable modules, module registry, input/output variables, versioning.</p></div>
+      <div class="topic-card"><h4>Workspaces</h4><p>Managing multiple environments (dev/staging/prod) with workspaces.</p></div>
+      <div class="topic-card"><h4>Terraform + Azure</h4><p>AzureRM provider, service principal auth, provisioning VMs, VNets, AKS.</p></div>
+      <div class="topic-card"><h4>Plan & Apply Workflow</h4><p>init → validate → plan → apply → destroy lifecycle explained.</p></div>
+      <div class="topic-card"><h4>Provisioners & Meta-args</h4><p>depends_on, count, for_each, lifecycle, provisioners.</p></div>
+      <div class="topic-card"><h4>Terraform in CI/CD</h4><p>Using Terraform in GitHub Actions and Azure DevOps pipelines.</p></div>
+    </div>
+
+    <div class="resources-block">
+      <h3>📚 Official Resources</h3>
+      <ul>
+        <li><a href="https://developer.hashicorp.com/terraform/docs" target="_blank">Terraform Official Docs</a></li>
+        <li><a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs" target="_blank">AzureRM Provider Registry</a></li>
+        <li><a href="https://developer.hashicorp.com/terraform/tutorials/azure-get-started" target="_blank">Terraform Azure Get Started Tutorial</a></li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <p>DevOpsPrep · <a href="../index.html">Home</a></p>
+    </footer>
+  </main>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

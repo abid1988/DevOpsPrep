@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linux — DevOpsPrep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">DevOps<br><strong>Prep</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-item" data-label="Home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="azure.html" class="nav-item" data-label="Azure"><span class="nav-icon">☁️</span><span class="nav-label">Azure</span></a></li>
+      <li><a href="terraform.html" class="nav-item" data-label="Terraform"><span class="nav-icon">🏗️</span><span class="nav-label">Terraform</span></a></li>
+      <li><a href="azuredevops.html" class="nav-item" data-label="Azure DevOps"><span class="nav-icon">🔄</span><span class="nav-label">Azure DevOps</span></a></li>
+      <li><a href="linux.html" class="nav-item active" data-label="Linux"><span class="nav-icon">🐧</span><span class="nav-label">Linux</span></a></li>
+    </ul>
+    <button class="sidebar-toggle" id="toggleBtn" title="Toggle Sidebar">&#x25C4;</button>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+
+    <div class="page-hero">
+      <div class="page-hero-top">
+        <a href="../index.html" class="back-link">← Back</a>
+        <span class="page-badge badge-linux">Bash</span>
+      </div>
+      <h1 class="page-title">🐧 Linux</h1>
+      <p class="page-desc">Linux fundamentals for DevOps engineers. File system, permissions, processes, networking commands, shell scripting, and systemd service management.</p>
+    </div>
+
+    <h2 class="section-title">Topics Covered</h2>
+    <div class="topics-grid">
+      <div class="topic-card"><h4>File System & Navigation</h4><p>Directory structure, ls, cd, find, locate, ln, and path management.</p></div>
+      <div class="topic-card"><h4>Permissions & Ownership</h4><p>chmod, chown, chgrp, SUID/SGID, sticky bit, ACLs explained.</p></div>
+      <div class="topic-card"><h4>Process Management</h4><p>ps, top, htop, kill, nice, nohup, systemd, journalctl.</p></div>
+      <div class="topic-card"><h4>Shell Scripting (Bash)</h4><p>Variables, conditionals, loops, functions, cron jobs, and script debugging.</p></div>
+      <div class="topic-card"><h4>Networking Commands</h4><p>ip, ss, netstat, curl, wget, ping, traceroute, iptables basics.</p></div>
+      <div class="topic-card"><h4>Package Management</h4><p>apt, yum/dnf, snap — install, update, remove, and repositories.</p></div>
+      <div class="topic-card"><h4>Storage & Disk</h4><p>df, du, lsblk, fdisk, mount/umount, LVM basics.</p></div>
+      <div class="topic-card"><h4>SSH & Remote Access</h4><p>SSH key auth, scp, rsync, port forwarding, ssh config file.</p></div>
+    </div>
+
+    <div class="resources-block">
+      <h3>📚 Official Resources</h3>
+      <ul>
+        <li><a href="https://linux.die.net/man/" target="_blank">Linux Man Pages</a></li>
+        <li><a href="https://www.gnu.org/software/bash/manual/" target="_blank">Bash Reference Manual</a></li>
+        <li><a href="https://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd Official Docs</a></li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <p>DevOpsPrep · <a href="../index.html">Home</a></p>
+    </footer>
+  </main>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>
